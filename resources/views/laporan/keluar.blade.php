@@ -74,18 +74,18 @@
                           <td>{{$item->jumlah}}</td>
                           <td>{{ date('d M Y',strtotime($item->tanggal_transaksi)) }}</td>
                           <td>
-                              <div class="btn-group" data-toggle="tooltip" data-placement="bottom" title="Hapus/ Kembalikan stock">
-                                <button 
-                                data-href="{{route('transaksi.destroy-masuk',$item->id)}}" 
-                                data-toggle="modal" 
-                                data-target="#hapus-stok" 
-                                data-nama="{{$item->getBarang->nama}}"
-                                class="btn btn-xs btn-danger" >
-                                  <i class="fa fa-trash"></i>
-                                  Hapus/ Kembalikan stock
-                                </button>
-                              </div>
-                          </td>
+                            <div class="btn-group" data-toggle="tooltip" data-placement="bottom" title="Hapus/ Kembalikan stock">
+                              <button 
+                              data-href="{{route('transaksi.destroy-keluar',$item->id)}}" 
+                              data-toggle="modal" 
+                              data-target="#hapus-stok" 
+                              data-nama="{{$item->getBarang->nama}}"
+                              class="btn btn-xs btn-danger" >
+                                <i class="fa fa-trash"></i>
+                                Hapus/ Kembalikan stock
+                              </button>
+                            </div>
+                        </td>
                       </tr>
                     @endforeach
                   </tbody>
@@ -118,7 +118,7 @@
       <form action="" method="post" class="act-ok-stok">
       <div class="modal-body">
           <p>Tindakan ini akan mempengaruhi stok yang ada pada gudang. 
-            <br>Stok gudang akan <b>dikurangi sesuai total data</b> yang akan dihapus saat ini.
+            <br>Stok gudang akan <b>ditambah sesuai total data</b> yang akan dihapus saat ini.
             <br>
             ingin melanjutkan ?</p>
       </div>
