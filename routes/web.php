@@ -68,5 +68,10 @@ Route::group(['middleware' => ['web','auth']],function(){
         Route::delete('/{id}/stok-keluar','TransaksiController@destroyStokKeluar')->name('transaksi.destroy-keluar');
     });
 
+    Route::group(['prefix'=>'laporan'],function(){
+        Route::get('/masuk','LaporanController@barangMasuk')->name('laporan.masuk');
+        Route::get('/keluar','LaporanController@barangKeluar')->name('laporan.keluar');
+    });
+
     
 });

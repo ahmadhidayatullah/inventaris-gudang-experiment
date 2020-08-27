@@ -65,8 +65,8 @@
 
           <li><a><i class="fa fa-pie-chart"></i> Laporan <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="#">Barang Masuk</a></li>
-              <li><a href="#">Barang Keluar</a></li>
+              <li><a href="{{route('laporan.masuk')}}">Barang Masuk</a></li>
+              <li><a href="{{route('laporan.keluar')}}">Barang Keluar</a></li>
 
             </ul>
           </li>
